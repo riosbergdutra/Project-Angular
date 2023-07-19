@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FormComponent {
   formgroup: FormGroup;
+  name: string = ''
 
   constructor(private formBuilder: FormBuilder) {
     this.formgroup = this.formBuilder.group({

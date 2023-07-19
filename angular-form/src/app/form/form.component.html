@@ -2,7 +2,7 @@
   <form class="form" [formGroup]="formgroup" (ngSubmit)="onSubmit()">
     <div class="name">
       <label for="username">Nome de Usuário:</label>
-      <input type="text" id="username" formControlName="username" placeholder="Usuário">
+      <input type="text" id="username" formControlName="username" placeholder="Usuário" [(ngModel)]="name">
       <div>
         Nome de usuário é obrigatório.
       </div>
@@ -25,5 +25,6 @@
     </div>
 
     <button type="submit">Enviar</button>
+      <div class="welcome"><h2>Welcome</h2> {{name}}</div>
   </form>
 </div>

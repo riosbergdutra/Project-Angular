@@ -1,5 +1,3 @@
-
-
 div {
   margin-bottom: 10px;
 }
@@ -32,14 +30,35 @@ button:disabled {
 }
 
 .formulario {
-  width: 600px;
-  margin: 0 auto;
+  width: 100%; /* Alterado para 100% para ocupar a largura do dispositivo */
+  max-width: 600px; /* Largura máxima do formulário */
+  margin: 20px auto; /* Adiciona margem superior para o espaço do header */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  height: 410px;
+  height: auto; /* Altura automática para acomodar o conteúdo */
+  box-sizing: border-box; /* Adicionado para incluir a borda e o preenchimento na largura total */
+}
+
+.welcome {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+/* Novas regras para tornar o formulário responsivo */
+/* Entre 602px e 1322px */
+@media screen and (min-width: 602px) and (max-width: 1322px) {
+  .formulario {
+    max-width: 80%; /* Reduz a largura do formulário para 80% da tela */
+  }
+}
+
+/* Até 601px (celular) */
+@media screen and (max-width: 601px) {
+  .formulario {
+    max-width: 90%; /* Reduz a largura do formulário para 90% da tela */
+    position: static; /* Remove a posição absoluta para ajustar o fluxo do layout */
+    transform: none; /* Remove a transformação translateY */
+    margin-top: 20px; /* Adiciona margem superior para o espaço do header */
+  }
 }
