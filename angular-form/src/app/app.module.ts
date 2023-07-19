@@ -7,11 +7,13 @@ import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { appRoutingModule } from './app.routing-module';
+import { PaginaComponent } from './pagina/pagina.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FormComponent
+    FormComponent,
+    PaginaComponent
   ],
   imports: [
     BrowserModule,
